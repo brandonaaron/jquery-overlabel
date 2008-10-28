@@ -19,7 +19,7 @@ $.fn.overlabel = function() {
 
 		$input
 			.bind('focus blur', function(event) {
-				$label[ (event.type == 'blur' && !$input.val() ? 'show' : 'hide') ]();
+				$label.css('display', (event.type == 'blur' && !$input.val() ? '' : 'none'));
 			}).trigger('blur');
 	});
 };

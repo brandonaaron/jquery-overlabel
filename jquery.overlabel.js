@@ -10,8 +10,14 @@
 
 $.fn.overlabel = function() {
     this.each(function() {
-        var $label = $(this),
-            $input = $('#' + $label.attr('for'));
+
+        if (this.tagName == 'LABEL') {
+            var $label = $(this),
+                $input = $('#' + $label.attr('for'));
+        } else {
+            var $input = $(this),
+                $label = $('label[for='+$input.attr('id')+']', this.form);
+        }
 
         $label
             .addClass('overlabel')

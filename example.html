@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>overlabel example</title>
+        <style type="text/css" media="screen">
+            body { font: 12px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif; color: #000; background: #fff; }
+            h1 { font-size: 18px; }
+            .row { position: relative; }
+            label.overlabel {
+                position: absolute;
+                top: 4px;
+                left: 5px;
+                z-index: 1;
+                color: #999;
+            }
+        </style>
+        <script>
+            (function(){
+                    var verMatch = /v=([\w\.]+)/.exec( location.search ),
+                    version = verMatch && verMatch[1], src;
+                    if ( version ) {
+                            src = 'code.jquery.com/jquery-' + version;
+                    } else {
+                            src = 'code.jquery.com/jquery-git';
+                    }
+                    document.write( '<script src="http://' + src + '.js"><\/script>' );
+            })();
+        </script>
+        <script src="jquery.overlabel.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            jQuery(function($) {
+                $('#version').html('using jQuery ' + $.fn.jquery);
+                $('form input[type=text]').prev('label').overlabel();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>jQuery Over Label Plugin Example (<span id="version"></span>)</h1>
+        <form>
+            <fieldset>
+                <legend>Information</legend>
+                <div class="row">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName">
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>

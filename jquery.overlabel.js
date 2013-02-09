@@ -20,6 +20,12 @@
             var $label = $(this),
                 $input = $('#' + $label.attr('for'));
 
+            // support calling directly on inputs
+            if ($label.is('input')) {
+                $input = $label;
+                $label = $('label[for='+$input.attr('id')+']', this.form);
+            }
+
             $label
                 .addClass('overlabel')
                 .bind('click', function(event) {

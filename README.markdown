@@ -23,6 +23,10 @@ Here is an example of the JS.
     // select labels for text inputs, assuming the label is directly before the input
     $('form input[type=text]').prev('label').overlabel();
 
+You can also call this on the inputs directly.
+
+    $('form input:text').overlabel();
+
 ## License
 
 The overlabel plugin is licensed under the MIT License (LICENSE.txt).

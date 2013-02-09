@@ -1,0 +1,28 @@
+{
+    "name": "overlabel",
+    "title": "jQuery Over Label",
+    "description": "A jQuery plugin to help implement the over label technique described in Making Compact Forms More Accessible by Mike Brittain on ALA.",
+    "keywords": [
+        "form",
+        "label",
+        "over",
+        "accessible"
+    ],
+    "version": "1.1.0",
+    "author": {
+        "name": "Brandon Aaron",
+        "url": "http://brandonaaron.net"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://raw.github.com/brandonaaron/jquery-overlabel/master/LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/brandonaaron/jquery-overlabel/issues",
+    "homepage": "https://github.com/brandonaaron/jquery-overlabel",
+    "download": "https://github.com/brandonaaron/jquery-overlabel/tags",
+    "dependencies": {
+        "jquery": ">=1.0.4"
+    }
+}
